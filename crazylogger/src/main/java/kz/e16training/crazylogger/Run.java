@@ -15,9 +15,9 @@ public class Run {
         logger.log("Error 3");
         logger.log("Error 4");
         logger.printLog();
-        System.out.println("---");
+        System.out.println("find by \"Error 2:\"");
         logger.printLog("Error 2");
-        System.out.println("---");
+        System.out.println("find by date today's:");
         Calendar calendar = Calendar.getInstance();
         logger.printLog(calendar.getTime());
     }

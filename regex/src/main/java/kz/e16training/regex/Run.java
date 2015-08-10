@@ -20,7 +20,7 @@ public class Run {
         int count = 1;
         for (Pattern pattern : patterns) {
             Matcher m = pattern.matcher(INPUT_STRING);
-            System.out.printf("%3d : pattern %-28.60s", count++, pattern.toString());
+            System.out.printf("%3d : pattern %-26.60s", count++, pattern.toString());
             System.out.print(" ( ");
             while (m.find()) {
                 System.out.print(m.group() + " ");
