@@ -1,4 +1,4 @@
-package kz.e16training.htmlparserv;
+package kz.e16training.htmlparser;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -10,13 +10,11 @@ import java.util.List;
  */
 public class Run {
     public static void main(String[] args) {
-        List<Line> refLines = new ArrayList<Line>();
-        List<Line> picLines = new ArrayList<Line>();
+        List<Line> bothLines = new ArrayList<Line>();
         Parser parser = new Parser();
-        parser.parse(refLines, picLines);
-        parser.setState(refLines, picLines);
-        printLines(refLines);
-        printLines(picLines);
+        parser.parse(bothLines);
+        parser.setState(bothLines);
+        printLines(bothLines);
     }
 
     public static void printLines(List<Line> lines) {

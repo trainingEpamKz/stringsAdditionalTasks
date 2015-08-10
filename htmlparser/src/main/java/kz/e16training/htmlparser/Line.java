@@ -1,4 +1,4 @@
-package kz.e16training.htmlparserv;
+package kz.e16training.htmlparser;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -8,15 +8,17 @@ import java.util.List;
  *
  */
 public class Line {
+    private boolean isPic;
     private int numbOfLine;
     private String data;
     private List<Integer> numbOfPics;
     private boolean isRefPrevPic;
 
-    public Line(int numbOfLine, String data) {
+    public Line(int numbOfLine, String data, boolean isPic) {
         this.numbOfLine = numbOfLine;
         this.data = data;
         this.numbOfPics = new ArrayList<Integer>();
+        this.isPic = isPic;
     }
 
     public void addNumbOfPic(int numbOfPic) {
@@ -39,9 +41,13 @@ public class Line {
         isRefPrevPic = true;
     }
 
+    public boolean isPic() {
+        return isPic;
+    }
+
     @Override
     public String toString() {
-        return numbOfLine + (isRefPrevPic ? " Ref prev pic" : "") + " : "  + numbOfPics.toString() + " : " + data;
+        return String.format("%4s : %3s : %4s : %-50s", numbOfLine, isPic ? "pic" : "ref", isPic ? "pic" : (isRefPrevPic ? "fail" : "ok"), numbOfPics.toString());
     }
 
 }
