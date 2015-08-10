@@ -30,4 +30,4 @@
 
 
 Необходимо определить в тексте статьи* (html-файл), ссылается ли автор на рисунки последовательно или нет, а также выделить все предложения, в которых встречаются ссылки на рисунки. Для разбора текста использовать регулярные выражения.
-[*Статья приведена в приложении к данному файлу заданий](https://github.com/traningEpamKz/lessons/blob/master/tasks/Java.SE.03.Information%20handling_task_attachment.html)
+[*Статья приведена в приложении к данному файлу заданий](https://github.com/traningEpamKz/stringsAdditionalTasks/blob/master/Java.SE.03.Information%20handling_task_attachment.html)
